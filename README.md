@@ -21,7 +21,8 @@ The Movie App is a web application that allows users to browse, search, and mana
 
 1. Clone the repository:
 
- https://github.com/thinesh-12/phase2-project-Movie-App
+ Front-end: https://phase2-project-movie-app.netlify.app/
+ Back-end: https://phase2-project-backend.onrender.com/
 
 2. Navigate to the project directory:
 cd movie-app
