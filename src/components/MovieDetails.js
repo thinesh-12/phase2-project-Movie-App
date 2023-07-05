@@ -6,7 +6,7 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/movies/${id}`)
+    fetch(`http://localhost:3000/movies/${id}`)
       .then((response) => response.json())
       .then((data) => setMovie(data));
   }, [id]);
@@ -20,6 +20,7 @@ function MovieDetails() {
       <h1>Movie Details</h1>
       <h2>{movie.title}</h2>
       <p>{movie.genre}</p>
+      <p>{movie.description}</p>
     </div>
   );
 }
