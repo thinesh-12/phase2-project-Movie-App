@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 
 function NewMovie() {
   const [title, setTitle] = useState('');
+  const [genre, setGenre] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const movieData = { title, description };
+    const movieData = { title, genre,description };
 
     const configObj = {
       method: 'POST',
@@ -15,7 +16,7 @@ function NewMovie() {
       body: JSON.stringify(movieData),
     };
 
-    fetch('http://localhost:3000/movies', configObj)
+    fetch('http://localhost:3001/movies', configObj)
       .then((response) => response.json())
       .then((data) => {
         console.log('New movie added:', data);
@@ -34,6 +35,14 @@ function NewMovie() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Genre:</label>
+          <input
+            type="text"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
           />
         </div>
         <div>

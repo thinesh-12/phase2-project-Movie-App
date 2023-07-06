@@ -8,7 +8,7 @@ function EditMovie() {
   const [description, setDescription] = useState('');
 
   useEffect(() => {
-    fetch(`http://localhost:3000/movies/${id}`)
+    fetch(`http://localhost:3001/movies/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setMovie(data);
@@ -28,7 +28,7 @@ function EditMovie() {
       body: JSON.stringify(updatedMovie),
     };
 
-    fetch(`http://localhost:3000/movies/${id}`, configObj)
+    fetch(`http://localhost:3001/movies/${id}`, configObj)
       .then((response) => response.json())
       .then((data) => {
         console.log('Movie updated:', data);

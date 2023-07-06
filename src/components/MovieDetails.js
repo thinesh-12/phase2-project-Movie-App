@@ -6,7 +6,7 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/movies/${id}`)
+    fetch(`http://localhost:3001/movies/${id}`)
       .then((response) => response.json())
       .then((data) => setMovie(data));
   }, [id]);
@@ -17,10 +17,10 @@ function MovieDetails() {
 
   return (
     <div>
-      <h1>Movie Details</h1>
-      <h2>{movie.title}</h2>
-      <p>{movie.genre}</p>
-      <p>{movie.description}</p>
+        <h1 className="movie-details-title">Movie Details</h1>
+      <h2 className="movie-details-title">{movie.title}</h2>
+      <p className="movie-details-description">{movie.description}</p>
+      <p className="movie-details-genre">{movie.genre}</p>
     </div>
   );
 }
