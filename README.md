@@ -23,6 +23,13 @@ The Movie App is a web application that allows users to browse, search, and mana
 
  Front-end: https://phase2-project-movie-app.netlify.app/
  Back-end: https://phase2-project-backend.onrender.com/
+ 
+ Or if you want to install locally:
+
+Github Front-end: https://github.com/thinesh-12/phase2-project-Movie-App
+Github Back-end: https://github.com/thinesh-12/phase2-project-backend
+
+After forking, and cloning the SSH, navigate to the folder you wish to clone into and run:
 
 2. Navigate to the project directory:
 cd movie-app
